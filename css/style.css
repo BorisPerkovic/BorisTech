@@ -1,0 +1,273 @@
+.header{
+    background: #000;
+}
+.margin{
+    margin: auto;
+}
+.log{
+    background-color: #fac50f;
+    margin-right: 5px;
+    font-weight: 500;
+}
+#searchList{
+    position: absolute;
+    left: 369px;
+    top: 64px;
+    z-index: 3;
+    color: #fac50f;
+}
+#searchList img{
+    width: 30px;
+    height: 30px;
+    margin: 0;
+    margin-right: 5px;
+    vertical-align: bottom;
+}
+#searchList ul{
+    list-style-type: none;
+}
+#searchList ul li{
+    width: 550px;
+}
+#searchList ul li a{
+    display: block;
+    color: black;
+    background: #fafafa;
+    padding: 5px 3px;
+    text-decoration: none;
+    font-size: 15px;
+    text-align: left;
+}
+#searchList ul li:hover{
+    font-weight: 450;
+    border-top: 1px solid silver;
+    border-bottom: 1px solid silver;
+}
+.profil-text{
+    background: #000;
+    color: #fac50f;
+    border: none;
+}
+.profil-text:hover{
+    background: rgba(0, 0, 0, 0.3);
+    color: #fac50f;
+    text-decoration: none;
+}
+.profil a:hover{
+    background: #fff;
+    color: #fac50f;
+    transition: color 0.4s ease-in-out;
+}
+.profil-link a{
+    color: #000;
+}
+.profil-link a:hover{
+    background: #fff;
+    color: #fac50f;
+    transition: color 0.4s ease-in-out;
+    text-decoration: none;
+}
+.d-block{
+    height: 342px;
+}
+.carousel-control-prev,
+.carousel-control-next{
+    width: 50px;
+    height: 50px;
+    background-color: #000;
+    border-radius: 50%;
+    top: calc(50% - 25px);
+}
+.carousel-control-prev{
+    left: 5%;
+}
+.carousel-control-next{
+    right: 5%;
+}
+.md-form input{
+    border: none;
+    border-bottom: 1px solid black;
+    margin-bottom: 25px;
+}
+#navi{
+    padding: 0px;
+}
+#category{
+    background: #fac50f;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-weight: 550;
+    font-size: 13px;
+}
+.mega-menu{
+    width: 1050px;
+    padding: 5px;
+    overflow: hidden;
+    text-transform: none;
+    font-weight: unset;
+    font-size: unset;
+    letter-spacing: normal;
+}
+.mega-menu a{
+    padding: unset;
+    padding-left: 5px;
+}
+.mega-menu a:hover{
+    background: #fff;
+    color: #fac50f;
+    transition: color 0.4s ease-in-out;
+}
+.headline{
+    padding-top: 30px;
+    color: rgb(138, 136, 136);
+}
+#product{
+    height: 140px;
+}
+.viewMore a{
+    background: #000;
+    color: #fac50f;
+}
+.viewMore a:hover{
+    background:#fac50f;
+    color: #000;
+    font-weight: 550;
+}
+.middle{
+    padding-top: 30px;
+    width: 100%;
+}
+#footer{
+    background: #292a2c;
+    color: rgb(138, 136, 136);
+}
+#footer a{
+    color: rgb(138, 136, 136);
+    font-size: 15px;
+    text-decoration: none;
+}
+#footer a:hover{
+    color: #fac50f;
+    transition: color 0.4s ease-in-out;
+}
+#social{
+    margin-top: 20px;
+    background-color: #000;
+    
+}
+#social a{
+    color: #fac50f;
+    font-size: 23px;
+    
+}
+#social a:hover{
+    opacity: 0.5;
+}
+.social{
+    margin-left: 20px;
+}
+.bottomImg{
+    width: 50px;
+    height: 30px;
+    margin-bottom: 0px;
+}
+.copy{
+    background: #000;
+    padding: 5px;
+}
+.footer-margin{
+    margin: auto 0px;
+}
+#btt{
+    background: #000;
+    color: #fac50f;
+}
+#copy{
+    margin-top: 10px;
+}
+#main{
+    margin-top: 25px;
+}
+#product_info{
+    margin-top: 100px;
+}
+.newarrival{
+    background: green;
+    width: 50px;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+}
+.price{
+    color: #fe980f;
+    font-size: 26px;
+    font-weight: bold;
+}
+#productInfo{
+    margin-left: 25px;
+}
+#cart{
+    background: #000;
+    border-radius: 10px;
+    padding: 10px;
+    color: white;
+}
+#cart:hover{
+    color: #fac50f;
+    transition: color 0.4s ease-in-out;
+    text-decoration: none;
+}
+#specComments{
+    margin-top: 40px;
+}
+#spec{
+    margin-right: 20px;
+}
+#table{
+    margin-top: 20px;
+}
+#specInfo tr:nth-child(even){
+    background-color: #fafafa;
+}
+#commentsInfo{
+    display: none;
+}
+#aprroved_comments{
+    padding: 10px;
+    margin: 5px;
+    background: #f2f2f2;
+}
+.cart-padding{
+    padding: 10px;
+    margin-top: 5px;
+}
+#cartIMG{
+    width: 120px;
+    height: 75px;
+    margin-top: 75px;
+}
+.cart-trash{
+    font-size: 23px;
+    margin-top: 105px;
+}
+.cart-trash:hover{
+    cursor: pointer;
+}
+#users_data{
+    margin-bottom: 50px;
+}
+#users_dataChange{
+    display: none;
+    margin-bottom: 50px;
+    
+}
+#users_passChange{
+    display: none;
+    margin-bottom: 50px;
+}
+#data_table{
+    margin-top: 50px;
+}
+#pass_table{
+    margin-top: 50px;
+}
