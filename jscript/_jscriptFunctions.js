@@ -112,7 +112,8 @@ $(document).ready(function(){
          data:{action:action, brand:brand, category:category},
          success: function(data){
           $("#loader").hide();
-          $('.filter_data').html(data);
+          $('.filter_data').empty();
+          $('#result').html(data);
          }
        });
      }

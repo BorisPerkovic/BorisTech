@@ -4,13 +4,13 @@ require_once("../php/classBase.php");
 $db=new Baza();
 $db->connect();
 if(isset($_POST['action']))
-{   
-    $query="SELECT * FROM specification WHERE dislike=0 ";
-    if(isset($_POST['brand']) AND isset($_POST['category']))
+{
+    $category= $_POST['category'];   
+    $query="SELECT * FROM specification WHERE category='{$category}' ";
+    if(isset($_POST['brand']))
     {
-        $category= $_POST['category'];
         $brand= implode("','", $_POST['brand']);
-        $query .="AND category='{$category}' AND products_brand IN('".$brand."')";
+        $query .="AND products_brand IN('".$brand."')";
     }
     $rez=$db->query($query);
     $output='';
@@ -19,22 +19,22 @@ if(isset($_POST['action']))
         while($row=$db->fetch_object($rez))
         {
             $output .='
-            <div class="col-md-3 mb-1">
-                        <div class="card-deck">
-                        <div class="card  border-secondary">
-                                <img id="product" class="card-img-top" src="../pics/'.$row->specification_id.',v.jpg" alt="Responsive image">
-                                <div class="card-body">
-                                <h5 class="card-title text-danger">'.$row->price.' RSD</h5>
-                                <p>
-                                        '.$row->products_brand.'<br>
-                                        '.$row->products_model.'<br>
-                                </p>
-                                <span class="viewMore"><a class="btn btn-warning btn-block " href="pages/productinfo.php?kategorija='.$row->category.'&sifraProizvoda='.$row->specification_id.'">Više&nbsp;&raquo;</a></span>
-                                </div>
-                        </div>
-                        </div>
-                </div>
-            ';
+            <div class="col-xl-2 col-lg-2 col-md-5 col-sm-3 col-5 filter_data">
+                    <div class="card-deck">
+                    <div class="card  border-secondary">
+                            <img id="product" class="card-img-top" src="../pics/'.$row->specification_id.',v.jpg" alt="Responsive image">
+                            <div class="card-body">
+                            <h5 class="card-title text-danger">'.$row->price.' RSD</h5>
+                            <p>
+                                    '.$row->products_brand.'<br>
+                                    '.$row->products_model.'<br>
+                            </p>
+                            <span class="viewMore"><a class="btn btn-warning btn-block " href="pages/productinfo.php?kategorija='.$row->category.'&sifraProizvoda='.$row->specification_id.'">Više&nbsp;&raquo;</a></span>
+                            </div>
+                    </div>
+                    </div>
+            </div>';
+            
         }
     }
     else{
