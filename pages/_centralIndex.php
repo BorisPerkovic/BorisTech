@@ -5,7 +5,6 @@
         <hr>
 </div>
 <div class="container-fluid">
-    <div class="log-lg-9">
         <div class="row" id="result">
             <?php
                 $sql="SELECT * FROM specification ORDER BY rand() LIMIT 12";
@@ -14,10 +13,10 @@
                 {
             ?>
             <!--Products cards-->
-            <div class="col-md-2 mb-1">
+            <div class="col-xl-2 col-lg-3 col-md-4 col-sm-4 col-6">
                 <div class="card-deck">
                     <div class="card  border-secondary">
-                        <img id="product" class="card-img-top" src='pics/<?= $row['specification_id'];?>,v.jpg' alt='Responsive image'>
+                        <img id="product" class="card-img-top img-fluid" src='pics/<?= $row['specification_id'];?>,v.jpg' alt='Responsive image'>
                         <div class="card-body">
                             <h5 class="card-title text-danger"><?= $row['price'];?> RSD</h5>
                             <p>
@@ -33,7 +32,6 @@
                 };
             ?>
         </div>
-    </div>
 </div>      
                 <!-- middle IMG-->
 <div class="container-fluid">
@@ -46,7 +44,6 @@
         <hr>
 </div>
 <div class="container-fluid">
-    <div class="log-lg-9">
         <div class="row" id="result">
             <?php
                 $sql="SELECT * FROM specification ORDER BY rand() LIMIT 12";
@@ -55,10 +52,10 @@
                 {
             ?>
             <!--Products cards-->
-            <div class="col-md-2 mb-1">
+            <div class="col-xl-2 col-lg-3 col-md-4 col-sm-4 col-6">
                 <div class="card-deck">
                     <div class="card  border-secondary">
-                        <img id="product" class="card-img-top" src='pics/<?= $row['specification_id'];?>,v.jpg' alt='Responsive image'>
+                        <img id="product" class="card-img-top img-fluid" src='pics/<?= $row['specification_id'];?>,v.jpg' alt='Responsive image'>
                         <div class="card-body">
                             <h5 class="card-title text-danger"><?= $row['price'];?> RSD</h5>
                             <p>
@@ -74,6 +71,5 @@
                 };
             ?>
         </div>
-    </div>
 </div>
 <!-- end of main part where is all kind of products -->
