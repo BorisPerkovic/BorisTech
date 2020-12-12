@@ -4,7 +4,7 @@
 <?php
 $category=$_GET['kategorija'];
 ?>
-<div class="conrainer-fluid">
+<div class="conrainer-fluid" style="padding-left: 15px; padding-right: 15px;">
 
 <div class="row">
         <div class="col-xl-2 col-lg-2 col-md-4 col-sm-2 col-2">

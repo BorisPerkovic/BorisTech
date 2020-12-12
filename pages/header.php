@@ -1,17 +1,20 @@
 <!-- header where is logo, search, log in or register-->
-<header>
+<header style="padding-left: 15px; padding-right: 15px;">
 
 <div class="container-fluid header">
     <div class="row d-flex justify-content-lg-between">
 
         <!--Company logo-->
-        <div class="col-">
+        <div class="col-xl-2 col-lg-3">
             <a class="navbar-brand" href="../index.php"><img src="../pics/logo.jpg" alt="logo"></a>
         </div>
         
         <!--Search input field-->
-        <div class="col-7 margin">
+        <div class="col-xl-7 col-lg-6 margin" id="searchinput">
             <input id="searchText" name="search" class="form-control form-control-md mr-sm-2" type="search" placeholder="Unesite termin za pretragu..." aria-label="Search">
+            <div id="searchList">
+                    
+            </div>
         </div>
         <?php
             //IF user is login buttons for login and registry are hide and show users name lastname status and shhoping cart
@@ -61,7 +64,7 @@
         {
         ?>
             <!--Buttons in header for login or register if user is not login-->
-        <div class="col- margin">
+        <div class="col-xl-2 col-lg-3 margin" id="logreg">
             <ul class='nav'>
                     <li class='nav-item justify-content-right'>
                     <a href='' class='btn btn-warning log' data-toggle='modal' data-target='#signinPage'>Prijava</a>
@@ -152,10 +155,5 @@
         </div>
     </div>
 </div>
-
-    <!--Search list field sinc with ajax php and sql--> 
-    <div id="searchList">
-                    
-    </div> 
 </header>
     <!-- end of header where is logo, search, log in or register-->

@@ -13,10 +13,6 @@ if(isset($_POST['query']))
             echo "<li><a href='productinfo.php?kategorija=".$row['category']."&sifraProizvoda=".$row['specification_id']."'</a><img src='../pics/".$row['specification_id'].",v.jpg'>".$row['products_brand']." ".$row['products_model']."</li>";
         }
     }
-    else
-    {
-        echo "<li>Željeni proizvod ne postoji!!</li>";
-    }
     echo "</ul>";
 }
 ?>
