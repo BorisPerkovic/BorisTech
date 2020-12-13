@@ -13,7 +13,7 @@
                 {
             ?>
             <!--Products cards-->
-            <div class="col-xl-2 col-lg-3 col-md-4 col-sm-4 col-6">
+            <div class="col-xl-2 col-lg-3 col-md-4 col-sm-4 col-6 filter_data">
                 <div class="card-deck">
                     <div class="card  border-secondary">
                         <img id="product" class="card-img-top img-fluid" src='pics/<?= $row['specification_id'];?>,v.jpg' alt='Responsive image'>
@@ -52,7 +52,7 @@
                 {
             ?>
             <!--Products cards-->
-            <div class="col-xl-2 col-lg-3 col-md-4 col-sm-4 col-6">
+            <div class="col-xl-2 col-lg-3 col-md-4 col-sm-4 col-6 filter_data">
                 <div class="card-deck">
                     <div class="card  border-secondary">
                         <img id="product" class="card-img-top img-fluid" src='pics/<?= $row['specification_id'];?>,v.jpg' alt='Responsive image'>

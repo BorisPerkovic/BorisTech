@@ -69,9 +69,6 @@
     transition: color 0.4s ease-in-out;
     text-decoration: none;
 }
-.d-block{
-    height: 342px;
-}
 .carousel-control-prev,
 .carousel-control-next{
     width: 50px;
@@ -122,6 +119,12 @@
 .headline{
     padding-top: 30px;
     color: rgb(138, 136, 136);
+}
+#result{
+    padding-bottom: 95px;
+}
+.filter_data{
+    margin-bottom: 10px;
 }
 #product{
     height: 140px;
@@ -280,6 +283,13 @@
     }
     #logreg{
         margin-bottom: 20px;
+    }
+    
+}
+@media (max-width: 575px) {
+
+    #result{
+        margin-top: 20px;
     }
     
 }

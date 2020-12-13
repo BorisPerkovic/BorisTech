@@ -7,12 +7,7 @@ $category=$_GET['kategorija'];
 <div class="conrainer-fluid" style="padding-left: 15px; padding-right: 15px;">
 
 <div class="row">
-        <div class="col-xl-2 col-lg-2 col-md-4 col-sm-2 col-2">
-                <!-- Left side with filters-->
-                <h3>Filter</h3>
-                <hr>
-        </div>
-        <div class="col-xl-10 col-lg-10 col-md-8 col-sm-10 col-10">
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                 <h3 class="text-center" id="filter_category"><?= $category ?></h3>
                 <hr>
                 <div class="text-center">
@@ -26,7 +21,7 @@ $category=$_GET['kategorija'];
 <div class="row">
 
         <!-- Left side with filters-->
-        <div class="col-xl-2 col-lg-2 col-md-4 col-sm-2 col-2">
+        <div class="col-xl-2 col-lg-2 col-md-4 col-sm-4 col-12">
                 <h6 class="text-info">Brand</h6>
                 <ul class="list-group">
                 <?php
@@ -49,7 +44,7 @@ $category=$_GET['kategorija'];
         </div>
 
         <!-- Right side with showing products-->
-        <div class="col-lg-10 col-md-8">
+        <div class="col-xl-10 col-lg-10 col-md-8 col-sm-8 col-12">
         <div class="row" id="result">
         <?php
         $sql="SELECT * FROM specification WHERE category='{$category}'";
@@ -58,7 +53,7 @@ $category=$_GET['kategorija'];
         {
         ?>
                 <!--Products cards-->
-                <div class="col-xl-2 col-lg-3 col-md-5 col-sm-3 col-5 filter_data">
+                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-6 filter_data">
                         <div class="card-deck">
                         <div class="card  border-secondary">
                                 <img id="product" class="card-img-top" src='../pics/<?= $row['specification_id'];?>,v.jpg' alt='Responsive image'>
