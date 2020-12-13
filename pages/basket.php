@@ -42,8 +42,18 @@ $db->connect();
     <div class="container">
         <h2 class="text-center">Korpa</h2>
             
-        <div class="row" style="margin: 25px 5px 0px 5px; border: 1px solid #000;">
-            
+        <div class="row" style="margin: 25px 5px 0px 0px; border: 1px solid #000;">
+        <table class="table text-center">
+        <thead>
+            <tr>
+            <th scope="col">Šifra proizvoda</th>
+            <th scope="col">Slika proizvoda</th>
+            <th scope="col">Naziv proizvoda</th>
+            <th scope="col">Cena</th>
+            </tr>
+        </thead>
+        <tbody>
+
             <?php
             //SQL for showing cart products
             $query="SELECT * FROM orders WHERE accepted=1 AND users_id='{$_SESSION['users_id']}'";
@@ -53,22 +63,26 @@ $db->connect();
                while($row=$db->fetch_object($result))
                 {
             ?>
-                <div class="col-xl-3 col-lg-3 col-md-4" style="margin-bottom: 20px;">
-                <p><?= $row->products_brand ?> <?= $row->products_model ?>  <a href='basket.php?id=<?=$row->basket_id?>' title="obrisi iz korpe"><i class="fas fa-times cart-trash"></i></a></p> 
-                <p><img id="cartIMG" src="../pics/<?= $row->specification_id ?>,v.jpg" alt="Responsive image"></p> 
-                <p><h6>Cena: <?= $row->price ?> RSD</h6>
-                </div>
+                    <tr>
+                    <th scope="row">#<?=$row->specification_id?></th>
+                    <td><img id="cartIMG" src="../pics/<?= $row->specification_id ?>,v.jpg" alt="Responsive image"></td>
+                    <td><?= $row->products_brand ?> <?= $row->products_model ?></td>
+                    <td><?= $row->price ?> RSD</td>
+                    <td><a href='basket.php?id=<?=$row->basket_id?>' title="obrisi iz korpe"><i class="fas fa-times cart-trash"></i></a></td>
+                    </tr>
             <?php
                 }     
             }
             else
                 echo "<div style='padding: 80px;'>Vaša korpa je prazna. Nemate proizvoda u korpi!!</div>";
             ?>
+        </tbody>
+        </table>
         </div>
         <div class="row d-flex justify-content-between cart-padding" style="margin-bottom: 300px;">
             <div>
             <a href='basket.php?funkcija=poruci'><button class="btn btn-warning">Poručite</button></a>
-            </div>
+            </div>   
 
             <div>
             <?php
