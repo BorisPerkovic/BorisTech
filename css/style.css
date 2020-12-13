@@ -231,11 +231,15 @@
 #table{
     margin-top: 20px;
 }
+#specInfo{
+    padding: 0px;
+}
 #specInfo tr:nth-child(even){
     background-color: #fafafa;
 }
 #commentsInfo{
     display: none;
+    padding: 0px;
 }
 #aprroved_comments{
     padding: 10px;
@@ -249,11 +253,9 @@
 #cartIMG{
     width: 120px;
     height: 75px;
-    margin-top: 75px;
 }
 .cart-trash{
-    font-size: 23px;
-    margin-top: 105px;
+    margin-left: 15px;
 }
 .cart-trash:hover{
     cursor: pointer;
@@ -284,7 +286,11 @@
     #logreg{
         margin-bottom: 20px;
     }
-    
+    .carousel-control-prev,
+    .carousel-control-next{
+        width: 30px;
+        height: 30px;
+    }
 }
 @media (max-width: 575px) {
 

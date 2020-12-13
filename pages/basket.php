@@ -42,6 +42,8 @@ $db->connect();
     <div class="container">
         <h2 class="text-center">Korpa</h2>
             
+        <div class="row" style="margin: 25px 5px 0px 5px; border: 1px solid #000;">
+            
             <?php
             //SQL for showing cart products
             $query="SELECT * FROM orders WHERE accepted=1 AND users_id='{$_SESSION['users_id']}'";
@@ -51,49 +53,36 @@ $db->connect();
                while($row=$db->fetch_object($result))
                 {
             ?>
-                <div class="row col-md-10 bg-warning cart-padding">    
-                    <div class="col-md-3 text-center">
-                            <img id="cartIMG" src="../pics/<?= $row->specification_id ?>,v.jpg" alt="Responsive image">
-                    </div>
-                    <div class="col-md-5">
-                        <p>Kategorija: <?= $row->category ?></p>
-                        <p>Brand: <?= $row->products_brand ?></p>
-                        <p>Model: <?= $row->products_model ?></p>
-                        <p>Porudžbina broj: #<?= $row->basket_id?></p>
-                        <p>Vreme kupovine: <?= $row->shop_time ?></p>
-                        <h5>Cena: <?= $row->price ?> RSD</h5>
-                    </div>
-                    <div class="col-md-2">
-                    <a href='basket.php?id=<?=$row->basket_id?>'><i class="fas fa-trash cart-trash"></i></a> 
-                    </div>
-                </div>      
-                <?php     
-                }
-                ?>
-                <div class="row d-flex justify-content-between col-md-10 bg-link cart-padding">
-                    <div>
-                    <a href='basket.php?funkcija=poruci'><button class="btn btn-warning">Poručite</button></a>
-                    </div>
-
-                    <div>
-                    <?php
-                    //SQL query for sum price of ordered products
-                        $sql="SELECT SUM(price) AS sum FROM orders WHERE users_id='{$_SESSION['users_id']}' AND accepted=1";
-                        $res=$db->query($sql);
-                        $red=$db->fetch_object($res);
-                        echo "<h5>Ukupna cena porudžbine: <b>".$red->sum." RSD</b></h5>";
-                    ?>
-                    </div>
+                <div class="col-xl-3 col-lg-3 col-md-4" style="margin-bottom: 20px;">
+                <p><?= $row->products_brand ?> <?= $row->products_model ?>  <a href='basket.php?id=<?=$row->basket_id?>' title="obrisi iz korpe"><i class="fas fa-times cart-trash"></i></a></p> 
+                <p><img id="cartIMG" src="../pics/<?= $row->specification_id ?>,v.jpg" alt="Responsive image"></p> 
+                <p><h6>Cena: <?= $row->price ?> RSD</h6>
                 </div>
-                
-            <?php     
+            <?php
+                }     
             }
             else
                 echo "<div style='padding: 80px;'>Vaša korpa je prazna. Nemate proizvoda u korpi!!</div>";
-            ?>  
+            ?>
+        </div>
+        <div class="row d-flex justify-content-between cart-padding" style="margin-bottom: 300px;">
+            <div>
+            <a href='basket.php?funkcija=poruci'><button class="btn btn-warning">Poručite</button></a>
+            </div>
 
+            <div>
+            <?php
+            //SQL query for sum price of ordered products
+                $sql="SELECT SUM(price) AS sum FROM orders WHERE users_id='{$_SESSION['users_id']}' AND accepted=1";
+                $res=$db->query($sql);
+                $red=$db->fetch_object($res);
+                echo "<h5>Ukupna cena porudžbine: <b>".$red->sum." RSD</b></h5>";
+            ?>
+            </div>
         </div>
     </div>
+
+
 
     <!--footer-->
         <?php

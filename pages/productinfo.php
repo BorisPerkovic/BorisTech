@@ -50,7 +50,7 @@ $category=$_GET['kategorija'];
     <!--products info with carousel and basic information-->
         <!--left side with carousel-->
     <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-5 col-5">
             <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
@@ -71,7 +71,7 @@ $category=$_GET['kategorija'];
             </div>
         </div>
         <!--right side with product information-->
-        <div class="col-md-7" id="productInfo">
+        <div class="col-md-6 col-6" id="productInfo">
            <p class="newarrival text-center">NOVO</p> 
            <h2><?= $row->products_brand ?> <?=$row->products_model ?></h2>
            <p>Sifra proizvoda:<span id="product_id"> <?= $row->specification_id ?></span></p>
@@ -84,7 +84,7 @@ $category=$_GET['kategorija'];
     </div>
 
     <!--button for show specification and comments on click-->
-    <div class="row justify-content-start" id="specComments">
+    <div class="row justify-content-start" id="specComments" style="padding-right: 15px; padding-left: 15px">
             <!--button for show specification on click-->
             <div id="spec">
             <button class="btn btn-warning btn-lg spec">Specifikacije</button>
@@ -100,14 +100,14 @@ $category=$_GET['kategorija'];
                 <button class="btn btn-warning btn-lg comments">Komentari (<?= $db->num_rows($res) ?>)</button>
             </div>
     </div>
-    <div class="row justify-content-start" id="table">
+    <div class="row justify-content-start" id="table" style="padding-right: 15px; padding-left: 15px">
         <!--Table specification-->
         <div class="col-md-6" id="specInfo">
             <?php
                 include("../php/_productinfo.php");
             ?>
         </div>
-        <div class="col-md-8" id="commentsInfo">
+        <div class="col-md-6"  id="commentsInfo">
             <!-- form for insert comments for products -->
             <form action="#"  method="post">
                     <p>Unesite Vaše ime*</p>
