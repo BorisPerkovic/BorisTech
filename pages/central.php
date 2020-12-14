@@ -6,10 +6,11 @@ $category=$_GET['kategorija'];
 ?>
 <div class="conrainer-fluid" style="padding-left: 15px; padding-right: 15px;">
 
+<div class="wrapper">
+
 <div class="row">
-        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" style="padding-bottom: 25px;">
                 <h3 class="text-center" id="filter_category"><?= $category ?></h3>
-                <hr>
                 <div class="text-center">
                         <img src="../pics/loading.gif" id="loader" width="200" style="display: none;">
                 </div> 
@@ -45,7 +46,7 @@ $category=$_GET['kategorija'];
 
         <!-- Right side with showing products-->
         <div class="col-xl-10 col-lg-10 col-md-8 col-sm-8 col-12">
-        <div class="row" id="result">
+        <div class="row" id="result" style="padding-bottom: 95px;">
         <?php
         $sql="SELECT * FROM specification WHERE category='{$category}'";
         $result=$db->query($sql);
@@ -55,7 +56,7 @@ $category=$_GET['kategorija'];
                 <!--Products cards-->
                 <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-6 filter_data">
                         <div class="card-deck">
-                        <div class="card  border-secondary">
+                        <div class="card  shadow border-light">
                                 <img id="product" class="card-img-top" src='../pics/<?= $row['specification_id'];?>,v.jpg' alt='Responsive image'>
                                 <div class="card-body">
                                 <h5 class="card-title text-danger"><?= $row['price'];?> RSD</h5>
@@ -77,7 +78,7 @@ $category=$_GET['kategorija'];
 </div>       
                         
                 
-                
+</div>              
 </div>
 
 </main>

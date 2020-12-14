@@ -21,7 +21,7 @@ if(isset($_POST['action']))
             $output .='
             <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-6 filter_data">
                     <div class="card-deck">
-                    <div class="card  border-secondary">
+                    <div class="card  shadow border-light">
                             <img id="product" class="card-img-top" src="../pics/'.$row->specification_id.',v.jpg" alt="Responsive image">
                             <div class="card-body">
                             <h5 class="card-title text-danger">'.$row->price.' RSD</h5>
