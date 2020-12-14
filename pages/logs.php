@@ -36,7 +36,7 @@ $db->connect();
           
     <!-- end of navigation of categories-->
 
-<div class="container">
+<div class="container" id="logs">
     <div class="col-md-6" style="padding-top: 80px;">
     <form action="logs.php" method="post" >
         <select class="custom-select" name="logovi" id="logovi">
@@ -53,9 +53,7 @@ $db->connect();
     </form>
         <br><br>
     </div>
-</div>
-
-<?php
+    <?php
     if(isset($_POST['logovi']) and $_POST['logovi']!="0")
     {
         $imeFajla="../logs/".$_POST['logovi'];
@@ -63,17 +61,18 @@ $db->connect();
         {
             $prikaz=file_get_contents($imeFajla);
             $prikaz=str_replace("\r\n", "<br>", $prikaz);
-?>
+    ?>
             <div class="container">
                 <p><?= $prikaz ?></p>
             </div> 
-<?php
+    <?php
         }
         else echo "Ne postoji datoteka koju ste izabrali";
     }
-    else
-        echo "Niste izabrali nijedan fajl!!!";
-?>
+    ?>
+</div>
+
+
 
     <!--footer-->
         <?php

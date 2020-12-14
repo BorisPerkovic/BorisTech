@@ -2,6 +2,9 @@
 <header style="padding-left: 15px; padding-right: 15px;">
 
 <div class="container-fluid header">
+
+    <div class="wrapper">
+
     <div class="row">
 
         <!--Company logo-->
@@ -79,9 +82,7 @@
         ?>
     </div>
 
-    
-    
-
+    </div>
 </div>
             <!--Modal-->
 <!-- Log in Page Content-->

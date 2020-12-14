@@ -38,7 +38,7 @@ $db->connect();
             //SQl function for aprrove or delete comments
             include("../php/comments.php");
         ?>
-    <div class="container">
+    <div class="container" id="comments">
         <h2 class="text-center">Komentari koji treba da se odobre / obrišu</h2>
         <?php
         //SQL query for comments that have to aprove or delete

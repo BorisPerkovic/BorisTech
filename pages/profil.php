@@ -19,7 +19,7 @@ $db->connect();
     <script src="../jscript/_jscriptFunctions.js"></script>
     <link href="../css/icons/all.min.css" rel="stylesheet">
     <link href="../css/style.css" rel="stylesheet">
-    <title>Korpa | BorisTech</title>
+    <title>Profil | BorisTech</title>
 </head>
 <body>
 
@@ -117,7 +117,6 @@ $db->connect();
 <hr>
 <div class="container">
     <h2 class="text-center">Vaši kupljeni proizvodi</h2>
-    <div class="log-lg-9">
         <div class="row" id="result">
             <?php
                 $query="SELECT * FROM orders WHERE accepted=2 AND users_id='{$_SESSION['users_id']}' ORDER BY shop_time DESC";
@@ -126,9 +125,9 @@ $db->connect();
                 {
             ?>
             <!--Products cards-->
-            <div class="col-md-3 mb-1">
+            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-6 filter_data">
                 <div class="card-deck">
-                    <div class="card  border-secondary">
+                    <div class="card shadow border-light">
                         <img id="product" class="card-img-top" src='../pics/<?= $row['specification_id'];?>,v.jpg' alt='Responsive image'>
                         <div class="card-body">
                             <p>Brand: <?= $row['products_brand']; ?></p>
@@ -144,7 +143,6 @@ $db->connect();
                 };
             ?>
         </div>
-    </div>
 </div>
     <!--footer-->
         <?php

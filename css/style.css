@@ -4,6 +4,10 @@
 .margin{
     margin: auto;
 }
+.wrapper{
+    max-width: 1600px;
+    margin: 0px auto;
+}
 .log{
     background-color: #fac50f;
     margin-right: 5px;
@@ -120,11 +124,11 @@
     padding-top: 30px;
     color: rgb(138, 136, 136);
 }
-#result{
-    padding-bottom: 95px;
-}
 .filter_data{
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+}
+.textChange{
+    margin-bottom: 40px;
 }
 #product{
     height: 140px;
@@ -277,6 +281,12 @@
 }
 #pass_table{
     margin-top: 50px;
+}
+#comments{
+    margin-bottom: 500px;
+}
+#logs{
+    margin-bottom: 500px;
 }
 @media (max-width: 991px) {
 

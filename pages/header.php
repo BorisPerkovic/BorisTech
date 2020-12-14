@@ -2,6 +2,8 @@
 <header style="padding-left: 15px; padding-right: 15px;">
 
 <div class="container-fluid header">
+    <div class="wrapper">
+
     <div class="row d-flex justify-content-lg-between">
 
         <!--Company logo-->
@@ -79,8 +81,7 @@
         ?>
     </div>
 
-    
-    
+    </div>
 
 </div>
             <!--Modal-->
