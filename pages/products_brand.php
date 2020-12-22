@@ -97,7 +97,7 @@ $brand=$_GET['brand'];
                                         <?= $row['products_brand']; ?><br>
                                         <?= $row['products_model']; ?><br>
                                 </p>
-                                <span class="viewMore"><a class="btn btn-warning btn-block " href="productinfo.php?kategorija=<?= $row['category'] ?>&sifraProizvoda=<?= $row['specification_id'] ?>">Više&nbsp;&raquo;</a></span>
+                                <span class="viewMore"><a class="btn btn-warning btn-block " href="../<?= $row['category'] ?>/<?= $row['specification_id'] ?>">Više&nbsp;&raquo;</a></span>
                                 </div>
                         </div>
                         </div>

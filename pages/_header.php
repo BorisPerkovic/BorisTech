@@ -9,7 +9,7 @@
 
         <!--Company logo-->
         <div class="col-xl-2 col-lg-3">
-            <a class="navbar-brand" href="index.php"><img src="pics/logo.jpg" alt="logo"></a>
+            <a class="navbar-brand" href="Početna"><img src="pics/logo.jpg" alt="logo"></a>
         </div>
         
         <!--Search input field-->

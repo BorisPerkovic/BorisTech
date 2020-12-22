@@ -1,0 +1,26 @@
+#Zabrana prikazivanja sadržaja foldera u koliko ne postoje index.php ili index.html fajlovi
+Options -Indexes
+
+#ErrorDocument varijante prikazivanja sopstvenih stranica za greške
+ErrorDocument 404 "Zeljena stranica ne postoji. Molimo Vas, vratite se nazad. / Requested page does not exict. Please, return back."
+ErrorDocument 403 "Nemate dozvolu da pristupite fajlovima na ovaj nacin. Molimo Vas, vratite se nazad. / You do not have permission to access this file. Please, return back."
+ErrorDocument 401 "Vasi podaci su neispravni. Unesite ispravne podatke"
+
+#NAPOMENA:
+# U slučaju da sadržaj .htaccess fajla ima grešku (npr. u kucanju), pojaviće se Apache Error 500, koji ne može da se predefiniše #direktivom #ErrorDocument iz .htacccess fajla
+#već samo u glavnom konfiguracionom fajlu httpd.conf
+
+#Rewrite fajlova 
+RewriteEngine On
+
+RewriteRule     Početna                             index.php
+
+#products.php stranica koja poziva proizvode na osnovu odredjene kategorije sa bilo koje stranice na sajtu kroz navigaciju 
+RewriteRule     ^Proizvod/([A-Za-z0-9-]+)/?$        pages/products.php?kategorija=$1
+
+#productinfo.php stranica koja poziva informacije o zeljenom prozvodu
+RewriteRule     ^([A-Za-z0-9-]+)/([0-9]+)/?$        pages/productinfo.php?kategorija=$1&sifraProizvoda=$2
+
+#productbrand.php stranica koja poziva odredjen brand sa bilo koje stranice na sajtu kroz navigaciju
+RewriteRule     ^([A-Za-z0-9-]+)/([A-Za-z0-9-]+)/?$  pages/products_brand.php?kategorija=$1&brand=$2
+

@@ -107,7 +107,7 @@ $(document).ready(function(){
        var brand=get_filter('brand');
        var category=$("#filter_category").text();
        $.ajax({
-         url: 'action.php',
+         url: '../action.php',
          method: 'POST',
          data:{action:action, brand:brand, category:category},
          success: function(data){
