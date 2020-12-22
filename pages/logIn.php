@@ -3,12 +3,6 @@ session_start();
 require_once("../php/function.php");
 require_once("../php/classBase.php");
 require_once("../php/classLog.php");
-if(isset($_GET['odjava']))
-{
-    Log::upisiLog("../logs/logovanja.txt", "Uspešna odjava korisnika {$_SESSION['users_name']}");
-    unistiSesiju();
-    
-}
 $db=new Baza();
 $db->connect();
 $poruka="";

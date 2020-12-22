@@ -7,7 +7,7 @@ if(isset($_GET['logoff']))
 {
     Log::upisiLog("../logs/logovanja.txt", "Uspešna odjava korisnika {$_SESSION['users_name']}");
     unistiSesiju();
-    header("location: ../index.php");
+    header("location: ../Početna");
     
 }
 $db=new Baza();

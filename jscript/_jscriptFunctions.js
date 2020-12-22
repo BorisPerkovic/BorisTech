@@ -70,7 +70,7 @@ $(document).ready(function(){
       if(name!="" && lastname!="" && email!="" && pass!="" && passrepeat!="" && addres!="" && phone!="")
       {
         $.ajax({
-          url:"../php/registry.php",
+          url:"php/registry.php",
           method:"POST",
           data:{name:name, lastname:lastname, email:email, pass:pass, passrepeat:passrepeat, addres:addres, phone:phone},
           success:function(data){

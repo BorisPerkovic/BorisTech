@@ -15,17 +15,17 @@ $db->connect();
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <script src="../jscript/jquery-3.5.0.js"></script>
-    <script src="../jscript/_jscriptFunctions.js"></script>
-    <link href="../css/icons/all.min.css" rel="stylesheet">
-    <link href="../css/style.css" rel="stylesheet">
+    <script src="jscript/jquery-3.5.0.js"></script>
+    <script src="jscript/jscriptFunctions.js"></script>
+    <link href="css/icons/all.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
     <title>Profil | BorisTech</title>
 </head>
 <body>
 
     <!-- header where is logo, search, viber, whatsup-->
         <?php
-            include("header.php");
+            include("_header.php");
         ?>
     <!-- end of header where is logo, search, viber, whatsup-->
 
@@ -83,7 +83,36 @@ $db->connect();
     <div class="row">
         <div class="col-md-5">
             <div class="table-responsive-sm" id="data_table">
-                
+                <table class="table">
+                <tr>
+                    <th>Broj naloga</th>
+                    <td><input type="text" name="users_id" id="users_id" value="<?= $row->users_id ?>"></td>
+                </tr>
+                <tr>
+                    <th>Ime</th>
+                    <td><input type="text" name="users_name" id="users_name" value="<?= $row->users_name ?>"></td>
+                </tr>
+                <tr>
+                    <th>Prezime</th>
+                    <td><input type="text" name="users_lastname" id="users_lastname" value="<?= $row->users_lastname ?>"></td>
+                </tr>
+                <tr>
+                    <th>E-mail</th>
+                    <td><input type="email" name="users_email" id="users_email" value="<?= $row->users_email ?>"></td>
+                </tr>
+                <tr>
+                    <th>Adresa</th>
+                    <td><input type="text" name="users_addres" id="users_addres" value="<?= $row->users_addres ?>"></td>
+                </tr>
+                <tr>
+                    <th>Telefon</th>
+                    <td><input type="text" name="users_phone" id="users_phone" value="<?= $row->users_phone ?>"></td>
+                </tr>
+                <tr>
+                    <th>Otkucajte lozinku</th>
+                    <td><input type="password" name="users_password" id="users_password"></td>
+                </tr>
+            </table>
             </div>
         </div>
     </div>
@@ -128,7 +157,7 @@ $db->connect();
             <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-6 filter_data">
                 <div class="card-deck">
                     <div class="card shadow border-light">
-                        <img id="product" class="card-img-top" src='../pics/<?= $row['specification_id'];?>,v.jpg' alt='Responsive image'>
+                        <img id="product" class="card-img-top" src='pics/<?= $row['specification_id'];?>,v.jpg' alt='Responsive image'>
                         <div class="card-body">
                             <p>Brand: <?= $row['products_brand']; ?></p>
                             <p>Model: <?= $row['products_model']; ?></p>
@@ -146,7 +175,7 @@ $db->connect();
 </div>
     <!--footer-->
         <?php
-            include("footer.php");
+            include("_footer.php");
         ?>
 	<!--end footer-->
 

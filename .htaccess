@@ -24,3 +24,21 @@ RewriteRule     ^([A-Za-z0-9-]+)/([0-9]+)/?$        pages/productinfo.php?katego
 #productbrand.php stranica koja poziva odredjen brand sa bilo koje stranice na sajtu kroz navigaciju
 RewriteRule     ^([A-Za-z0-9-]+)/([A-Za-z0-9-]+)/?$  pages/products_brand.php?kategorija=$1&brand=$2
 
+#bakset.php stranica sa korpom
+RewriteRule     Korpa                                pages/basket.php
+
+#profil.php stranica za upravljanje korisnickim profilom
+RewriteRule     Profil                               pages/profil.php
+
+#comments.php stranica za upravljanje komentarima
+RewriteRule     Komentari                            pages/comments.php
+
+#logs.php logovi
+RewriteRule     Logovi                               pages/logs.php
+
+
+
+
+
+
+

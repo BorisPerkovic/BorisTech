@@ -10,12 +10,8 @@ if(isset($_POST['query']))
     {
         while($row=mysqli_fetch_array($result))
         {
-            echo "<li><a href='pages/productinfo.php?kategorija=".$row['category']."&sifraProizvoda=".$row['specification_id']."'</a><img src='pics/".$row['specification_id'].",v.jpg'>".$row['products_brand']." ".$row['products_model']."</li>";
+            echo "<li><a href='".$row['category']."/".$row['specification_id']."'</a><img src='pics/".$row['specification_id'].",v.jpg'>".$row['products_brand']." ".$row['products_model']."</li>";
         }
-    }
-    else
-    {
-        echo "<li>Željeni proizvod ne postoji!!</li>";
     }
     echo "</ul>";
 }
