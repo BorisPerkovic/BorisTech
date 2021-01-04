@@ -8,6 +8,9 @@
     max-width: 1600px;
     margin: 0px auto;
 }
+.filter_wrapper{
+    max-width: 1350px;
+}
 .log{
     background-color: #fac50f;
     margin-right: 5px;

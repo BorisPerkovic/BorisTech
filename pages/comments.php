@@ -31,7 +31,7 @@ $db->connect();
 
     <!-- navigation of categories and navigation for login-->
         <?php
-            include("navigation.php");
+            include("_navigation.php");
         ?>
 
         <?php
@@ -49,7 +49,7 @@ $db->connect();
               while($row=$db->fetch_object($result))
               {
         ?>
-                <div class="bg-warning cart-padding">
+                <div class="bg-warning cart-padding" style="margin-bottom:250px">
                     <p>komentar broj: <span class="comment_number"><?= $row->comments_id ?></span></p>
                     <p><b> <?= $row->users_name ?></b> - <?= $row->comment_time ?></p>
                     <p> <?= $row->comment ?></p>
@@ -59,7 +59,7 @@ $db->connect();
               }
           }
           else
-            echo "<div style='padding: 80px;'>Nemate nijedan komentar za odobravanje!!</div>";
+            echo "<div style='padding: 80px; margin-bottom:320px'>Nemate nijedan komentar za odobravanje!!</div>";
                   
          ?>      
         

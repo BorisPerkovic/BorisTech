@@ -33,11 +33,11 @@
                         <?php echo "{$_SESSION['users_name']} ({$_SESSION['users_status']}) <i class='fas fa-shopping-cart'></i> ".$db->num_rows($res); ?> 
                     </button>
                     <div class="dropdown-menu dropdown-menu-right profil-link">
-                        <button class="dropdown-item" type="button"><a href="Korpa">Korpa <?= $db->num_rows($res) ?></a></button>
-                        <button class="dropdown-item" type="button"><a href="Profil">Moj profil</a></button>
-                        <button class="dropdown-item" type="button"><a href="Komentari">Komentari</a></button>
-                        <button class="dropdown-item" type="button"><a href="Logovi">Logovi</a></button>
-                        <button class="dropdown-item" type="button"><a href="php/logIn.php?logoff">Odjavite se</a></button>
+                        <button class="dropdown-item" type="button"><a href="../Korpa">Korpa <?= $db->num_rows($res) ?></a></button>
+                        <button class="dropdown-item" type="button"><a href="../Profil">Moj profil</a></button>
+                        <button class="dropdown-item" type="button"><a href="../Komentari">Komentari</a></button>
+                        <button class="dropdown-item" type="button"><a href="../Logovi">Logovi</a></button>
+                        <button class="dropdown-item" type="button"><a href="../php/logIn.php?logoff">Odjavite se</a></button>
                     </div>
                 </div>
 

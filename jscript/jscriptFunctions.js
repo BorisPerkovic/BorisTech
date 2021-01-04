@@ -130,7 +130,7 @@ $(document).ready(function(){
       if(users_password!="")
       {
           $.ajax({
-          url:'../php/data_change.php',
+          url:'php/data_change.php',
           method:'POST',
           data:{users_id: users_id, users_name:users_name, users_lastname:users_lastname, users_email:users_email, users_addres:users_addres, users_phone:users_phone, users_password:users_password},
           success: function(data){
@@ -140,7 +140,7 @@ $(document).ready(function(){
             }
             else
             {
-              alert("Uspešno ste izmenili Vaše podatke. Uživajte u kupovini!!")
+              alert("Uspešno ste izmenili Vaše podatke. Uživajte u kupovini!!");
               location.reload();
             }
           }
@@ -161,7 +161,7 @@ $(document).ready(function(){
       if(old_password!="" && change_password!="" && repeat_password!="")
       {
           $.ajax({
-          url:'../php/pass_change.php',
+          url:'php/pass_change.php',
           method:'POST',
           data:{users_id: users_id, old_password:old_password, change_password:change_password, repeat_password:repeat_password},
           success: function(data){

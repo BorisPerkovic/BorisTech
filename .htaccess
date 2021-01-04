@@ -13,13 +13,13 @@ ErrorDocument 401 "Vasi podaci su neispravni. Unesite ispravne podatke"
 #Rewrite fajlova 
 RewriteEngine On
 
-RewriteRule     Početna                             index.php
+RewriteRule     Početna                              index.php
 
 #products.php stranica koja poziva proizvode na osnovu odredjene kategorije sa bilo koje stranice na sajtu kroz navigaciju 
-RewriteRule     ^Proizvod/([A-Za-z0-9-]+)/?$        pages/products.php?kategorija=$1
+RewriteRule     ^Proizvod/([A-Za-z0-9-]+)/?$         pages/products.php?kategorija=$1
 
 #productinfo.php stranica koja poziva informacije o zeljenom prozvodu
-RewriteRule     ^([A-Za-z0-9-]+)/([0-9]+)/?$        pages/productinfo.php?kategorija=$1&sifraProizvoda=$2
+RewriteRule     ^([A-Za-z0-9-]+)/([0-9]+)/?$         pages/productinfo.php?kategorija=$1&sifraProizvoda=$2
 
 #productbrand.php stranica koja poziva odredjen brand sa bilo koje stranice na sajtu kroz navigaciju
 RewriteRule     ^([A-Za-z0-9-]+)/([A-Za-z0-9-]+)/?$  pages/products_brand.php?kategorija=$1&brand=$2
@@ -33,9 +33,29 @@ RewriteRule     Profil                               pages/profil.php
 #comments.php stranica za upravljanje komentarima
 RewriteRule     Komentari                            pages/comments.php
 
-#logs.php logovi
+#logs.php 
 RewriteRule     Logovi                               pages/logs.php
 
+#contact.php 
+RewriteRule     Kontakt                              pages/contact.php
+
+#onlineShopTerms.php logovi
+RewriteRule   Online-kupovina                        pages/onlineShopTerms.php
+
+#terms.php 
+RewriteRule   Uslovi-korišćenja                      pages/terms.php
+
+#delivery_info.php 
+RewriteRule   Načini-isporuke                        pages/delivery_info.php
+
+#pays.php 
+RewriteRule   Načini-plaćanja                        pages/pays.php
+
+#reclamation.php 
+RewriteRule   Reklamacije                            pages/reclamation.php
+
+#customerRights.php
+RewriteRule   Prava-portošača                        pages/customerRights.php
 
 
 

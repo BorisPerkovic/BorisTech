@@ -46,6 +46,7 @@ $category=$_GET['kategorija'];
 
         <!-- Right side with showing products-->
         <div class="col-xl-10 col-lg-10 col-md-8 col-sm-8 col-12">
+        <div class="filter_wrapper">
         <div class="row" id="result" style="padding-bottom: 95px;">
         <?php
         $sql="SELECT * FROM specification WHERE category='{$category}'";
@@ -54,7 +55,7 @@ $category=$_GET['kategorija'];
         {
         ?>
                 <!--Products cards-->
-                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-6 filter_data">
+                <div class="col-xl-2 col-lg-2 col-md-6 col-sm-6 col-6 filter_data">
                         <div class="card-deck">
                         <div class="card  shadow border-light">
                                 <img id="product" class="card-img-top" src='../pics/<?= $row['specification_id'];?>,v.jpg' alt='Responsive image'>
@@ -69,9 +70,12 @@ $category=$_GET['kategorija'];
                         </div>
                         </div>
                 </div>
+                
         <?php
         }
         ?>
+        </div>
+        
         </div>
         </div>
 

@@ -19,7 +19,7 @@ if(isset($_POST['action']))
         while($row=$db->fetch_object($rez))
         {
             $output .='
-            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-6 filter_data">
+            <div class="col-xl-2 col-lg-2 col-md-6 col-sm-6 col-6 filter_data">
                     <div class="card-deck">
                     <div class="card  shadow border-light">
                             <img id="product" class="card-img-top" src="../pics/'.$row->specification_id.',v.jpg" alt="Responsive image">

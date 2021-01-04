@@ -31,7 +31,7 @@ $db->connect();
 
     <!-- navigation of categories and navigation for login-->
         <?php
-            include("navigation.php");
+            include("_navigation.php");
         ?>
           
     <!-- end of navigation of categories-->
